@@ -27,7 +27,6 @@ async def get_multiple_images(number):
 async def hello(): 
     start = time.perf_counter()
     urls = await get_multiple_images(50)
-    print(urls)
     end = time.perf_counter()
     return render_template('index.html', end=end, start=start, urls=urls)
     
